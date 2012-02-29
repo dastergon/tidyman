@@ -1,0 +1,37 @@
+[Introduction]
+	In real life you need to tidy up things like your clothes and your house when your parents are going to visit you (true story).
+When you're in front of the computer / laptop / netbook screen download things like images, videos, audio files and documents.
+When you go to your "Download" folder and there is a total chaos then you realize that you should tidy these things to clean up this mess
+and to tell the truth, is one of the most boring things. You lose much of your precious time and this is where tidyman coming!
+
+[About Tidyman]
+	Tidyman is a tool that automatically tidies your images, your videos, your audio files and your documents . It is very easy to use and you need only few seconds to run it!! 
+	It creates a folder named "tidyman" in the folder you want to tidy and it creates folders 
+based on what type of file you want to tidy.
+
+[Author]
+	Pavlos Ratis ( dastergon )
+	dastergon [at] gmail [dot] com
+	http://dastergon.gr
+
+[Usage]
+  ./tidyman.sh [OPTION] [PATH]
+Options:
+-a - Tidy only audio
+-d - Tidy only documents
+-h - Display this help and exit
+-i - Tidy only images
+-v - Tidy only videos
+
+[Examples]
+ 
+Single argument - tidy only images.
+	user@linux~$./tidyman.sh -i Downloads/
+
+Double argument - tidy images and videos
+	user@linux~$./tidyman.sh -iv Downloads/
+
+All arguments - tidy all (audio,documents,images,videos)
+	user@linux~$./tidyman.sh -adiv Downloads/
+
+ 
