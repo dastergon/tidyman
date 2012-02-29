@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #-------------------------------------
-# tidyman  v1.0
+# tidyman  v.1.0
 # a script for lazy people which tidies files
 # by dastergon -- dastergon [AT] gmail [DOT] com 
 # www.dastergon.gr
