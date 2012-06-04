@@ -17,16 +17,20 @@ img=".png|.gif|.jpg|.jpeg|.tif|.tiff|.JPEG|.TIFF"
 doc=".doc|.pdf|.txt|.odt|.docx|.xls|.ppt"
 vid=".3gp|.mov|.webm|.avi|.wmv|.ogg|.mpeg|.mpg|.mp4|.flv|.swf"
 
+usage() {
+    printf "usage: %s [option(s)] path\n\n  %s\n" "$0" "Options:"
+    printf "\t%s\n" "-a - Tidy only audio"              \
+                    "-d - Tidy only documents\n"        \
+                    "-h - Display this help and exit\n" \
+                    "-i - Tidy only images"             \
+                    "-v - Tidy only videos"             \
+                    "e.g. $0 -adiv /home/user/Downloads - Tidy all"
+}
+
 while getopts ":a:d:i:v:h" optchar; do
 	case ${optchar} in
 		h)
-            printf "usage: %s [option(s)] path\n\n  %s\n" "$0" "Options:"
-            printf "\t%s\n" "-a - Tidy only audio"              \
-                            "-d - Tidy only documents\n"        \
-                            "-h - Display this help and exit\n" \
-                            "-i - Tidy only images"             \
-                            "-v - Tidy only videos"             \
-                            "e.g. $0 -adiv /home/user/Downloads - Tidy all"
+            usage
 			exit 0
 			;;
 		\?)
