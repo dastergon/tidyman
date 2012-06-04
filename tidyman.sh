@@ -7,6 +7,8 @@
 # www.dastergon.gr
 #-------------------------------------
 
+name="$0"
+
 IFS=$(echo -en "\n\b") #fix the issue about files with space between - e.g. "foo bar.jpg"
 OPTIND=1 #reset getopts
 folder=$2
@@ -18,13 +20,13 @@ doc=".doc|.pdf|.txt|.odt|.docx|.xls|.ppt"
 vid=".3gp|.mov|.webm|.avi|.wmv|.ogg|.mpeg|.mpg|.mp4|.flv|.swf"
 
 usage() {
-    printf "usage: %s [option(s)] path\n\n  %s\n" "$0" "Options:"
+    printf "usage: %s [option(s)] path\n\n  %s\n" "$name" "Options:"
     printf "\t%s\n" "-a - Tidy only audio"              \
                     "-d - Tidy only documents\n"        \
                     "-h - Display this help and exit\n" \
                     "-i - Tidy only images"             \
                     "-v - Tidy only videos"             \
-                    "e.g. $0 -adiv /home/user/Downloads - Tidy all"
+                    "e.g. $name -adiv /home/user/Downloads - Tidy all"
 }
 
 while getopts ":a:d:i:v:h" optchar; do
