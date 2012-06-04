@@ -36,7 +36,7 @@ while getopts ":a:d:i:v:h" optchar; do
 			exit 0
 			;;
 		\?)
-			echo -e "Wrong arguments, try again\nUsage: $0  [OPTION] [PATH]  -- For help: $0 -h" >&2
+            printf "error: unknown argument: -%s\nTry %s -h for help\n" "$OPTARG" "$name"
 			exit 1
 			;;
 		:)
