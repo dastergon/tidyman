@@ -11,13 +11,6 @@ IFS=$(echo -en "\n\b") #fix the issue about files with space between - e.g. "foo
 OPTIND=1 #reset getopts
 folder=$2
 
-usage="Options:\n
--a - Tidy only audio\n
--d - Tidy only documents\n
--h - Display this help and exit\n
--i - Tidy only images\n
--v - Tidy only videos\ne.g. $0 -adiv /home/user/Downloads - Tidy all"
-
 #reg.exp form vars
 aud=".mp3|.wma|.flac|.wav|.aac"
 img=".png|.gif|.jpg|.jpeg|.tif|.tiff|.JPEG|.TIFF"
@@ -27,7 +20,13 @@ vid=".3gp|.mov|.webm|.avi|.wmv|.ogg|.mpeg|.mpg|.mp4|.flv|.swf"
 while getopts ":a:d:i:v:h" optchar; do
 	case ${optchar} in
 		h)
-			echo -e $usage
+            printf "usage: %s [option(s)] path\n\n  %s\n" "$0" "Options:"
+            printf "\t%s\n" "-a - Tidy only audio"              \
+                            "-d - Tidy only documents\n"        \
+                            "-h - Display this help and exit\n" \
+                            "-i - Tidy only images"             \
+                            "-v - Tidy only videos"             \
+                            "e.g. $0 -adiv /home/user/Downloads - Tidy all"
 			exit 0
 			;;
 		\?)
