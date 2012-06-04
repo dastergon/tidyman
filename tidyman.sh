@@ -40,7 +40,7 @@ while getopts ":a:d:i:v:h" optchar; do
 			exit 1
 			;;
 		:)
-			echo -e "Option -$OPTARG requires a path.\nUsage: $0  [OPTION] [PATH] -- For help: $0 -h" >&2
+            printf "Option -%s requires a path. see %s -h\n" "$OPTARG" "$name"
 			exit 1
 			;;
 		a)
