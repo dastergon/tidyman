@@ -11,7 +11,7 @@ name="$0"
 
 IFS=$(echo -en "\n\b") #fix the issue about files with space between - e.g. "foo bar.jpg"
 OPTIND=1 #reset getopts
-folder=$2
+folder="$2"
 
 #reg.exp form vars
 aud=".mp3|.wma|.flac|.wav|.aac"
