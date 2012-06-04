@@ -1,9 +1,9 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 #-------------------------------------
 # tidyman  v.1.0
 # a script for lazy people which tidies files
-# by dastergon -- dastergon [AT] gmail [DOT] com 
+# by dastergon -- dastergon [AT] gmail [DOT] com
 # www.dastergon.gr
 #-------------------------------------
 
@@ -16,9 +16,9 @@ usage="Options:\n
 -d - Tidy only documents\n
 -h - Display this help and exit\n
 -i - Tidy only images\n
--v - Tidy only videos\ne.g. $0 -adiv /home/user/Downloads - Tidy all"	
+-v - Tidy only videos\ne.g. $0 -adiv /home/user/Downloads - Tidy all"
 
-#reg.exp form vars 
+#reg.exp form vars
 aud=".mp3|.wma|.flac|.wav|.aac"
 img=".png|.gif|.jpg|.jpeg|.tif|.tiff|.JPEG|.TIFF"
 doc=".doc|.pdf|.txt|.odt|.docx|.xls|.ppt"
