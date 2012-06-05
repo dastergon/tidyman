@@ -9,20 +9,16 @@
 
 name="$0"
 
-usage() {
-    printf "usage: %s [option(s)] path\n\n  %s\n" "$name" "Options:"
-    printf "\t%s\n" "-a - Tidy only audio"              \
-                    "-d - Tidy only documents\n"        \
-                    "-h - Display this help and exit\n" \
-                    "-i - Tidy only images"             \
-                    "-v - Tidy only videos"             \
-                    "e.g. $name -adiv /home/user/Downloads - Tidy all"
-}
-
 while true; do
 	case "$1" in
 		-h|--help)
-            usage
+            printf "usage: %s [option(s)] path\n\n  %s\n" "$name" "Options:"
+            printf "\t%s\n" "-a - Tidy only audio"              \
+                            "-d - Tidy only documents\n"        \
+                            "-h - Display this help and exit\n" \
+                            "-i - Tidy only images"             \
+                            "-v - Tidy only videos"             \
+                            "e.g. $name -adiv /home/user/Downloads - Tidy all"
 			exit 0
 			;;
 		-a)
