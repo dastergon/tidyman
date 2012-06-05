@@ -49,14 +49,16 @@ while true; do
 done
 
 folder="${1%/}"
-[ -n "$folder" ] || {
+
+if [ -n "$folder" ]; then
     printf "error: %s: no directory given\n" "$name"
     exit 1
-}
-[ -d "$folder" ] || {
+fi
+
+if [ -d "$folder" ]; then
     printf "error: %s: can't find directory: %s\n" "$name" "$folder"
     exit 1
-}
+fi
 
 if [ "$audio" -eq 1 ]; then
     type="audio"
