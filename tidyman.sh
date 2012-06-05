@@ -8,6 +8,10 @@
 #-------------------------------------
 
 name="$0"
+audio=0
+docum=0
+image=0
+video=0
 
 while true; do
 	case "$1" in
