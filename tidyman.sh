@@ -14,35 +14,29 @@ image=0
 video=0
 
 while true; do
-	case "$1" in
-		-h|--help)
+    case "$1" in
+        -h|--help)
             printf "usage: %s [option(s)] path\n\n  %s\n" "$name" "Options:"
             printf "\t%s\n" "-a - Tidy only audio"              \
-                            "-d - Tidy only documents\n"        \
-                            "-h - Display this help and exit\n" \
-                            "-i - Tidy only images"             \
-                            "-v - Tidy only videos"             \
-                            "e.g. $name -adiv /home/user/Downloads - Tidy all"
-			exit 0
-			;;
-		-a)
-            audio=1
-			;;
-		-d)
-            docum=1
-			;;
-		-i)
-            image=1
-			;;
-        -v)
-            video=1
+                "-d - Tidy only documents\n"        \
+                "-h - Display this help and exit\n" \
+                "-i - Tidy only images"             \
+                "-v - Tidy only videos"             \
+                "e.g. $name -adiv /home/user/Downloads - Tidy all"
+            exit 0
             ;;
-		-*)
-            printf "error: unknown argument: %s\nTry %s -h for help.\n" "$1" "$name"
-			exit 1
-			;;
-        *)
-            break
+        -a) audio=1
+            ;;
+        -d) docum=1
+            ;;
+        -i) image=1
+            ;;
+        -v) video=1
+            ;;
+        -*) printf "error: unknown argument: %s\nTry %s -h for help.\n" "$1" "$name"
+            exit 1
+            ;;
+        *) break
             ;;
     esac
     shift
