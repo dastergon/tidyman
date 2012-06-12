@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
 #-------------------------------------
-# tidyman  v.1.0
+# tidyman  v.2.0
 # a script for lazy people which tidies files
-# by dastergon -- dastergon [AT] gmail [DOT] com
-# www.dastergon.gr
+# @author0:dastergon [ dastergon[at]gmail[dot]com ]
+# @author1: c00kiemon5ter [ ivan.kanak[at]gmail[dot]com ]
 #-------------------------------------
 
 name="$0"
