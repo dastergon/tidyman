@@ -3,7 +3,7 @@
 #-------------------------------------
 # tidyman  v.2.0
 # a script for lazy people which tidies files
-# @author0:dastergon [ dastergon[at]gmail[dot]com ]
+# @author0: dastergon [ dastergon[at]gmail[dot]com ]
 # @author1: c00kiemon5ter [ ivan.kanak[at]gmail[dot]com ]
 #-------------------------------------
 
